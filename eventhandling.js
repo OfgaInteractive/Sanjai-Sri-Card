@@ -1,10 +1,11 @@
 // Debug log helper
+/*
 function log(msg) {
     const logDiv = document.getElementById("log");
     logDiv.innerHTML += "<br>" + msg;
     logDiv.scrollTop = logDiv.scrollHeight;
     console.log(msg);
-  }
+  }*/
   
   window.addEventListener("DOMContentLoaded", () => {
     const sceneEl = document.querySelector("a-scene");
@@ -18,17 +19,17 @@ function log(msg) {
   
     // AR system events
     sceneEl.addEventListener("loaded", () => {
-      log("Scene loaded, MindAR system ready");
+      //log("Scene loaded, MindAR system ready");
     });
   
     sceneEl.addEventListener("arReady", () => {
-      log("MindAR is ready");
+      //log("MindAR is ready");
     });
   
     // AR target events
     const target = sceneEl.querySelector("[mindar-image-target]");
     target.addEventListener("targetFound", () => {
-      log("Target Found!");
+      //log("Target Found!");
 
       /*
       //button pop animation 
@@ -49,7 +50,7 @@ function log(msg) {
       });
   
       logoModel.addEventListener("animationcomplete__scale", () => {
-        log("Scale complete → Moving left...");
+        //log("Scale complete → Moving left...");
         logoModel.setAttribute("animation__move", {
           property: "position",
           to: "-1 0 0",
@@ -59,7 +60,7 @@ function log(msg) {
       });
   
       logoModel.addEventListener("animationcomplete__move", () => {
-        log("Move complete → Playing idle animation");
+        //log("Move complete → Playing idle animation");
         logoModel.setAttribute("animation__rotate", {
           property: "rotation",
           to: "0 360 0",
@@ -71,7 +72,7 @@ function log(msg) {
     });
   
     target.addEventListener("targetLost", () => {
-      log("Target Lost!");
+      //log("Target Lost!");
       logoModel.removeAttribute("animation__scale");
       logoModel.removeAttribute("animation__move");
       logoModel.removeAttribute("animation-mixer");
@@ -86,22 +87,22 @@ function log(msg) {
   
     // Buttons
     Buttons.callBtn.addEventListener("click", () => {
-      log("Call clicked");
-      window.location.href = "tel:7358063881";
+      //log("Call clicked");
+      window.location.href = "tel:8248424811";
     });
   
     Buttons.mailBtn.addEventListener("click", () => {
-      log("Mail clicked");
-      window.location.href = "mailto:contact@worlyventure.com";
+      //log("Mail clicked");
+      window.location.href = "mailto:business@ofgainteractive.in";
     });
   
     Buttons.siteBtn.addEventListener("click", () => {
-      log("Site clicked");
-      window.location.href = "https://worleyventure.com";
+      //log("Site clicked");
+      window.location.href = "https://ofgainteractive.in/";
     });
   
     Buttons.pinBtn.addEventListener("click", () => {
-      log("Pin clicked");
+      //log("Pin clicked");
       window.location.href = "https://maps.app.goo.gl/qetcCErj4JorJ8Z26";
     });
   });
