@@ -88,7 +88,7 @@ function log(msg) {
     // Buttons
     Buttons.callBtn.addEventListener("click", () => {
       //log("Call clicked");
-      window.location.href = "tel:8248424811";
+      window.location.href = "tel:9789995797";
     });
   
     Buttons.mailBtn.addEventListener("click", () => {
